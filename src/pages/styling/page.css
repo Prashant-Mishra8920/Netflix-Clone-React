@@ -1,0 +1,30 @@
+.home-page{
+    overflow-y: hidden;
+}
+.now-playing{
+    overflow: overlay;
+}
+
+.backdrop{
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.backdrop img{
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.homeTabs{
+    padding-inline: 40px;
+}
+/* 
+h3{
+    padding-left: 10px;
+    text-align: start;
+} */
+

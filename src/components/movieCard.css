@@ -1,0 +1,45 @@
+.movie-card{
+    width: 150px;
+    height: 250px;
+    margin: 3px;
+    border-radius: 5px;
+    transition: 200ms ease-in;
+    overflow: hidden;
+}
+
+/* .movie-card:hover{
+    scale: 1.1;
+} */
+
+/* .mTab{
+    width: 500px;
+} */
+
+.movie-card img {
+    width: 150px;
+    height: 250px;
+}
+
+.movieTab{
+    /* padding-inline: 40px; */
+    margin-bottom: 20px;
+    overflow: auto;
+    text-align: left;
+}
+
+/* .movieCard{
+    transition: 100ms ease-in;
+}
+
+.movieCard:hover{
+    scale: 1.1;
+} */
+
+.now-playing{
+    display: flex;
+    flex-direction: row;
+}
+
+.now-playing::-webkit-scrollbar{
+    display: none;
+}

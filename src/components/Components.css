@@ -1,0 +1,61 @@
+.searchDiv{
+    position: absolute;
+    font-size: larger;
+    color: white;
+    z-index: 999999999999;
+    background-color: rgba(0,0,0,0.8);
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+    padding: 20px 50px 20px 50px;
+}
+
+.searchDiv::-webkit-scrollbar{
+    display: none;
+}
+
+.closeSearchDiv{
+    transition: 100ms ease-in;
+}
+
+.closeSearchDiv:hover{
+    color: rgba(250, 250, 250, 0.8);
+}
+
+.searchCard{
+    background-color: rgba(255,255,255,0.2);
+    width: fit-content;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 10px 10px 10px 10px;
+    transition: 100ms ease-in;
+}
+
+.searchCard:hover{
+    scale: 1.04;
+}
+
+
+.links{
+    color: white;
+    text-decoration: none;
+}
+
+.userCard {
+    margin: 10px;
+    border-radius: 10px; 
+    background-color: rgba(100,100,100,0.3);
+    overflow: hidden;
+    transition: 100ms ease-in;
+}
+
+.userCard:hover{
+    scale: 1.1;
+    /* border: 2px solid white; */
+}
+
+
+.myList{
+    padding: 30px 30px;
+}

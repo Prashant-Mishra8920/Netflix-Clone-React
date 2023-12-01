@@ -1,0 +1,38 @@
+.logo{
+    width: 150px;
+}
+
+.navbar{
+    position: absolute;
+    z-index: 99999;
+}
+
+.nav-menu{
+    display: flex;
+    gap: 25px;
+}
+
+.nav-menu li{
+    display: flex;
+}
+
+.link{
+    text-decoration: none;
+    color: white;
+    transition: 2ms ease-in;
+}
+  
+.link:hover{
+font-size: 110%;
+font-weight: 500;
+}
+
+.nav-gradient{
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgba(20,20,20,0.7),rgba(20,20,20,0.4),rgba(0,0,0,0.01));
+    width: 100vw;
+    height: 10%;
+}
+
+
+

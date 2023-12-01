@@ -1,0 +1,39 @@
+.gradient{
+    position: absolute;
+    background-image: linear-gradient(to right, rgba(0,0,0,.8), transparent);
+    color: white;
+    width: 100vw;
+    height: 100vh;
+}
+.login-body{
+    position: absolute;
+    padding: 20px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.back{
+    background-image: url('../../assets/loginBackground.jpg');
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.btn-lang{
+    background-color: white;
+}
+
+.login-header{
+    margin: 0px 20px;
+}
+
+.login-text-body{
+    margin-bottom: 10%;
+    color: white;
+}
+
+.logo{
+    width: 150px;
+}
+
