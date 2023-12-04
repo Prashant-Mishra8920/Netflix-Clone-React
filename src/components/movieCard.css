@@ -2,20 +2,22 @@
     width: 150px;
     height: 250px;
     margin: 3px;
-    border-radius: 5px;
+    border-radius: 10px;
     transition: 200ms ease-in;
-    overflow: hidden;
+    overflow: visible;
 }
 
-/* .movie-card:hover{
-    scale: 1.1;
-} */
+.movie-card:hover img{
+    /* scale: 1.1; */
+    border: 2px solid rgba(255,255,255,0.8);
+}
 
 /* .mTab{
     width: 500px;
 } */
 
 .movie-card img {
+    border-radius: 5px;
     width: 150px;
     height: 250px;
 }
@@ -23,8 +25,12 @@
 .movieTab{
     /* padding-inline: 40px; */
     margin-bottom: 20px;
-    overflow: auto;
+    /* overflow: auto; */
     text-align: left;
+}
+
+.movieTab::-webkit-scrollbar{
+    display: none;
 }
 
 /* .movieCard{
@@ -36,8 +42,9 @@
 } */
 
 .now-playing{
+    overflow: auto;
     display: flex; 
-     flex-direction: row;
+    flex-direction: row;
 }
 
 .now-playing::-webkit-scrollbar{

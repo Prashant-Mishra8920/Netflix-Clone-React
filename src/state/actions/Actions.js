@@ -28,6 +28,15 @@ export const searchCompleted = (item) => {
     }
 }
 
+// export const searchClicked = (item) => {
+//     return (dispatch) => {
+//         dispatch({
+//             type: 'searchClicked',
+//             payload: item
+//         })
+//     }
+// }
+
 
 
 

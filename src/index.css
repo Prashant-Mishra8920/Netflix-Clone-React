@@ -1,6 +1,7 @@
 body {
+  background-color: rgba(20,20,20);
   margin: 0;
-  font-family: Netflix;
+  font-family: Netflix,Arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 

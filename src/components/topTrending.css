@@ -16,9 +16,10 @@
 }
 
 .topTrendingCard{
-    background: linear-gradient(to right, rgba(50,50,50,0.5), rgba(0,0,0,0));
+    z-index: 1;
+    background: linear-gradient(to right, rgba(40,40,40,0.5), rgba(0,0,0,0));
     padding-left: 10px;
-    width: fit-content;
+    width: 250px;
     height: 250px;
     margin: 3px;
     margin-right: 10px;
@@ -27,7 +28,18 @@
     display: flex;
     justify-content: end;
     align-items: flex-end;
+    position: relative;
+    overflow: hidden;
+    transition: 200ms ease-in;
 }
+
+.topTrendingCard:hover{
+    width: 270px;
+}
+
+/* .topTrendingCard:hover img{
+    border: 2px solid rgba(255,255,255,0.8);
+} */
 
 
 .topTrendingCard img{
@@ -35,17 +47,29 @@
     width: 150px;
     height: 250px;
     border-radius: 10px;
+    box-shadow: -2px 2px 20px rgba(0, 0, 0, 0.8);
 }
 
-.topTrendingCard h1{
-    /* z-index: 1; */
-    /* position: absolute; */
-    /* left: 50px; */
+.upH{
+    z-index: -1;
+    position: absolute;
+    left: 25px;
     font-size: 10rem;
-    color: white;
-    -webkit-text-stroke-width: 1px;
+    /* color: rgba(255,255,255,0.95); */
+    /* color: black; */
+    -webkit-text-fill-color: rgba(30, 30, 30);
+    -webkit-text-stroke-width: 1px; 
   -webkit-text-stroke-color: white;
     /* color: 0 0 60px 30px #fff,
     0 0 100px 60px #f0f,
     0 0 140px 90px #0ff; */
+}
+
+.loH{
+    z-index: -2;
+    position: absolute;
+    left: 20px;
+    font-size: 10rem;
+    color: transparent; 
+    text-shadow: 0 0 10px rgba(255,255,255,0.4);
 }

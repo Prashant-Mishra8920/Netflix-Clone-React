@@ -8,7 +8,7 @@ const movieReducer = (state = initialState, action) => {
         case 'addMovies': return state.movies.find((movie)=> movie.id === action.payload.id) ? state : {movies: [...state.movies,action.payload]} 
         case 'removeMovies': return {movies: state.movies.filter((movie)=>movie.id !== action.payload.id)}
             // return {movies: [...state.movies, action.payload]}
-        case 'searchComplete': return !state.searchComplete
+        case 'searchComplete': return action
         default: return state
     }
 }

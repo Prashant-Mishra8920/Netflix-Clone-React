@@ -12,11 +12,12 @@ const TopTrendingCard = ({ movieList, title }) => {
       <h5>{title}</h5>
       <div className='topTrendingTab'>
         {movieList?.slice(0, 10).map((movie, index) => {
-          return <Link className='link' to={`/${movie.original_title}`} state={{ movie: movie }}><div className='topTrendingCard'>
+          return <Link className='link' to={`/${movie.original_title}`} state={{ movie: movie }} key={movie.id}><div className='topTrendingCard'>
             {/* <div>
               <h1 >{index + 1}</h1>
             </div> */}
-            <h1 >{index + 1}</h1>
+            <h1 className='upH'>{index + 1}</h1>
+            <h1 className='loH'>{index + 1}</h1>
             <img src={'https://image.tmdb.org/t/p/original' + movie.poster_path} />
             <div className='divBack'></div>
           </div></Link>

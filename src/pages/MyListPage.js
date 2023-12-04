@@ -12,7 +12,7 @@ const MyListPage = () => {
 
   const items = useSelector(state=>state.item)
 
-  console.log(items)
+  // console.log(items)
   return (
     <div>
       <MyList list={items.movies}/>

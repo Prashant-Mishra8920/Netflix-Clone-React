@@ -42,25 +42,9 @@ const HomePage = () => {
 
     return (
         <div className='home-page'>
-            {/* <Swiper
-                spaceBetween={50}
-                slidesPerView={3}
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}
-            >
-                <SwiperSlide>Slide 1</SwiperSlide>
-                <SwiperSlide>Slide 2</SwiperSlide>
-                <SwiperSlide>Slide 3</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
-            </Swiper> */}
             <BackDropTab movieList={nowPlayingMovieList} />
             <div className='homeTabs'>
-            <TopTrendingCard movieList={trendingThisWeekList} title={'Trending This Week'}/>
+                <TopTrendingCard movieList={trendingThisWeekList} title={'Trending This Week'} />
                 <MoviesTab movieList={nowPlayingMovieList} title={'Now Playing'} />
                 <MoviesTab movieList={popularMovieList} title={'Popular'} />
                 <MoviesTab movieList={topRatedMovieList} title={'Top-Rated'} />

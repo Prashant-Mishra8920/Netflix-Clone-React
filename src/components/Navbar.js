@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import SearchDiv from './SearchDiv'
 import { apiCall, apiKey } from '../api/ApiCall'
+import { useSelector } from 'react-redux';
 
 const Navbar = () => {
   const [search, setSearch] = useState("");
@@ -16,6 +17,11 @@ const Navbar = () => {
     setClicked(true)
   }
 
+  const items = useSelector(state => state.item)
+
+  useEffect(() => {
+    if (items.payload) { setSearch("") }
+  }, [items])
 
   useEffect(() => {
     apiCall(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${search}`, setSearchedMovie)
@@ -25,12 +31,12 @@ const Navbar = () => {
 
   return (
     <>
-      {(searchedMovie.length > 0) ? <SearchDiv list={searchedMovie}/> : <></>}
+      {(searchedMovie.length > 0) ? <SearchDiv list={searchedMovie} /> : <></>}
       <div className='nav-gradient' />
       <nav className='navbar navbar-expand-lg ps-4 pe-4 w-100' >
         <div className='container-fluid d-flex justify-content-between'>
           <div className='d-flex justify-content-center align-items-center'>
-            <img className='logo navbar-brand' src={nameLogo} alt='logo' />
+            <Link className='link' to='/home'><img className='logo navbar-brand' src={nameLogo} alt='logo' /></Link>
             {/* <button className='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarNavDropdown' ari-controls='navbarNavDropdown'>
               <span className='navbar-toggler-icon'></span>
             </button> */}
@@ -56,7 +62,7 @@ const Navbar = () => {
             <ul className='nav-menu'>
               <li>
                 {/* <Link className='link' to='/search'><FontAwesomeIcon icon={faMagnifyingGlass} /></Link> */}
-                <input className='form-control rounded' type='search' placeholder='search...' style={{ height: '35px', backgroundColor: 'rgba(255,255,255,0.9)'}} onClick={onClick} value={search} onChange={(e) => setSearch(e.target.value)} />
+                <input className='form-control rounded' type='search' placeholder='search...' style={{ height: '35px', backgroundColor: 'rgba(255,255,255,0.9)' }} onClick={onClick} value={search} onChange={(e) => setSearch(e.target.value)} />
               </li>
               {/* <li>
                   <Link className='link ' to='/kids'>KIDS</Link>
@@ -64,9 +70,9 @@ const Navbar = () => {
                 <li>
                   <Link className='link' to='DVD'>DVD</Link>
                 </li> */}
-              <li>
+              {/* <li>
                 <Link className='link' to='/search'><img src={require('../assets/user-icons/user1.png')} style={{ width: '30px', borderRadius: '50%' }} /></Link>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

@@ -54,7 +54,7 @@ const MoviePage = () => {
 
   }, [movie])
 
-  console.log(credit)
+  // console.log(credit)
 
 
   useEffect(() => {
@@ -100,8 +100,8 @@ const MoviePage = () => {
             <h1>{movie.title}</h1>
             <div className='d-flex align-items-center'>
               <button className='btn btn-primary btn-play me-3' onClick={onClick}><FontAwesomeIcon icon={faPlay} /> Play</button>
-              <div className='divBtn me-3'><FontAwesomeIcon icon={faPlus} /></div>
-              <div className='divBtn'><FontAwesomeIcon icon={faHeart} onClick={liked} style={items.movies.find((m) => m.id === movie.id) ? { color: 'red' } : { color: 'white' }} /></div>
+              {/* <div className='divBtn me-3'><FontAwesomeIcon icon={faPlus} /></div> */}
+              <div className='divBtn d-flex align-items-center justify-content-center' ><FontAwesomeIcon icon={faHeart} onClick={liked} style={items?.movies?.find((m) => m.id === movie.id) ? { color: 'red' } : { color: 'white' }} /></div>
             </div>
           </div>
           : <></>}
@@ -109,7 +109,7 @@ const MoviePage = () => {
         {(!clicked) ?
           <div>
             <div className='gradient-bottom' style={{ height: '60vh', position: 'absolute' }} />
-            <img src={'https://image.tmdb.org/t/p/original' + movie.backdrop_path} style={{ objectFit: 'cover', width: '100vw', height: '60vh' }} />
+            <img src={'https://image.tmdb.org/t/p/original' + movie.backdrop_path} alt={movie.title} style={{ objectFit: 'cover', width: '100vw', height: '60vh' }} />
           </div>
           : <div className='movieTrailer'>
             {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} loading='eager' />}
@@ -122,10 +122,10 @@ const MoviePage = () => {
           <p className='movieYear'>{releaseDate}</p>
           <div className='d-flex align-items-center me-3' style={{ height: 'fit-content' }}>
             <FontAwesomeIcon className='me-2' icon={faGlobe} />
-            <h6>{movie.original_language}</h6>
+            <h6 style={{margin: '2px'}}>{movie.original_language}</h6>
           </div>
           <div className='adultDiv'>
-            {(movie.adult) ? <h6>A 18+</h6> : <h6>U/A 7+</h6>}
+            {(movie.adult) ? <h6 style={{margin: '2px'}}>A 18+</h6> : <h6 style={{margin: '2px'}}>U/A 7+</h6>}
           </div>
         </div>
         <div className='d-flex' style={{ color: 'darkgray' }}>

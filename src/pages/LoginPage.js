@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import nameLogo from '../assets/nameLogo.png'
 import './styling/loginPage.css'
 
 const LoginPage = () => {
+    const [mail, setMail] = useState("");
+    const onSubmit = ()=>{
+    }
     return (
         <>
             <div>
@@ -22,10 +25,10 @@ const LoginPage = () => {
                     <h1>Unlimited movies, TV <br />shows, and more.</h1>
                     <h5>Watch anywhere. Cancel anytime.</h5>
                     <p>Ready to watch? Enter your email to create or restart your membership.</p>
-                    <form className='form-inline'>
+                    <form className='form-inline needs-validation'>
                         <div className='input-group'>
-                            <input className='form-control me-2' type='search' placeholder='Email address'></input>
-                            <Link to='/user'><button className='btn btn-danger' type='submit'>{'Get Started >'}</button></Link>
+                            <input className='form-control me-2' type='search' placeholder='Email address' onChange={(e)=>setMail(e.target.value)} required></input>
+                            <Link to='/user'><button className='btn btn-danger' type='submit' onSubmit={onSubmit}>{'Get Started >'}</button></Link>
                         </div>
                     </form>
                 </div>
