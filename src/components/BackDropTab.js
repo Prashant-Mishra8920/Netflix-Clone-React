@@ -19,7 +19,7 @@ const BackDropTab = ({ movieList }) => {
                 <img src={'https://image.tmdb.org/t/p/original' + movie.backdrop_path} style={{ width: '100px' }} />
                 {/* })} */}
                 <div className='d-flex flex-column ' style={{ position: 'absolute', width: '40vw', textAlign: 'left', paddingLeft: '50px', marginTop: '20vh'}}>
-                    <p>{movie.overview.substring(0, 200)}</p>
+                    <p className='d-none d-sm-block'>{movie.overview.substring(0, 200)}</p>
                     <div className='d-flex' >
                     <Link className='links' to={`/${movie.original_title}`} state={{movie: movie}}><button className='btn me-2 btn-play'><FontAwesomeIcon icon={faPlay} /> Play</button></Link>
                     <Link className='links' to={`/${movie.original_title}`} state={{movie: movie}}><button className='btn btn-other'><FontAwesomeIcon icon={faCircleInfo} /> More Info</button></Link>

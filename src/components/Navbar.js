@@ -31,18 +31,21 @@ const Navbar = () => {
         <div className='container-fluid d-flex justify-content-between'>
           <div className='d-flex justify-content-center align-items-center'>
             <img className='logo navbar-brand' src={nameLogo} alt='logo' />
-            <div className='page-links'>
-              <ul className='nav-menu'>
-                <li >
+            {/* <button className='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarNavDropdown' ari-controls='navbarNavDropdown'>
+              <span className='navbar-toggler-icon'></span>
+            </button> */}
+            <div className='collapse navbar-collapse page-links' id='navbarNavDropdown'>
+              <ul className='nav-menu navbar-nav'>
+                <li className='nav-item'>
                   <Link className='link' to='/home' >Home</Link>
                 </li>
-                <li>
+                <li className='nav-item'>
                   <Link className='link' to='/tv-shows'>TV Shows</Link>
                 </li>
                 {/* <li>
                   <Link className='link' to='/movies'>Movies</Link>
                 </li> */}
-                <li>
+                <li className='nav-item'>
                   <Link className='link' to='/my-list'>My List</Link>
                 </li>
               </ul>

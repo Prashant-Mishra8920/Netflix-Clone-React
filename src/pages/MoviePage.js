@@ -141,7 +141,7 @@ const MoviePage = () => {
             {/* {credit.cast?.slice(0, (credit.cast.length / 10) + 5).map((c) => {
               return <CreditsCard movieCredit={c} key={c.id}/>
             })} */}
-            {credit.cast?.filter((i)=>i.profile_path !== null).map((c) => {
+            {credit?.cast?.filter((i)=>i.profile_path !== null).map((c) => {
               return <CreditsCard movieCredit={c} key={c.id}/>
             })}
           </div>

@@ -1,8 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: Netflix;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -22,6 +20,11 @@ body::-webkit-scrollbar{
 
 .overflowH::-webkit-scrollbar{
   display: none;
+}
+
+@font-face {
+  font-family: Netflix;
+  src: url('./fonts/NetflixSans-Regular.otf');
 }
 
 
