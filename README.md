@@ -1,4 +1,4 @@
-![image](https://github.com/Prashant-Mishra8920/Netflix-Clone-React/assets/72730657/05faa68a-9b2b-4e6c-b360-834bc2a2a9d8)# Getting Started with Create React App
+# Getting Started with Create React App
 This project is a clone of the Netlix.
 
 ### `Project Images:`
@@ -17,5 +17,5 @@ This project is a clone of the Netlix.
 
 ### `Link to the website`
 
-(https://netmovie-16ef.onrender.com/home)
+(https://netmovie-16ef.onrender.com)
 
